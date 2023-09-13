@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64a61642848b8043aba91a36b801443, type: 3}
+  m_Name: AoE_T3
+  m_EditorClassIdentifier: 
+  name: AoE Test 1
+  image: {fileID: -162851515, guid: b0b2cefa98e4ec541bc06cd00a80fd88, type: 3}
+  cooldown: 0
+  range: 5
+  rangeGO: {fileID: 6514839998135122004, guid: cc13844410d76ba46b8beff6f6e1dabc, type: 3}
+  element: {fileID: 11400000, guid: 21af86dc3969f9f409c65c46c51514dd, type: 2}
+  baseEffect: 10
+  damageMult: 1
+  wisdomMult: 1
+  defenseMult: 0
+  cost: 3
+  hasPrevImage: 0
+  prevImage: {fileID: 21300000, guid: 21b5b46987a261645a903dde726cd674, type: 3}
+  hasNextImage: 1
+  nextImage: {fileID: 21300000, guid: f35640159eaa03f4388c519f68ede016, type: 3}
+  canDamageSelf: 1
+  type: 0
+  area: {fileID: 4263832015472385972, guid: db8ea055ba78ec84e8fb79b489139f98, type: 3}
+  areaOfImpact: 3

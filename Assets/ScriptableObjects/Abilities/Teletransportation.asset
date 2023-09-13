@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6dcc96a57f85b479343ae726358405, type: 3}
+  m_Name: Teletransportation
+  m_EditorClassIdentifier: 
+  name: tele
+  image: {fileID: -1332287687, guid: b0b2cefa98e4ec541bc06cd00a80fd88, type: 3}
+  cooldown: 0
+  range: 8
+  rangeGO: {fileID: 6514839998135122004, guid: cc13844410d76ba46b8beff6f6e1dabc, type: 3}
+  element: {fileID: 11400000, guid: cc2b99048e3363a46bf9e5fce12ede07, type: 2}
+  baseEffect: 0
+  damageMult: 0
+  wisdomMult: 0
+  defenseMult: 0
+  cost: 1
+  hasPrevImage: 0
+  prevImage: {fileID: 21300000, guid: 21b5b46987a261645a903dde726cd674, type: 3}
+  hasNextImage: 0
+  nextImage: {fileID: 0}
+  canDamageSelf: 0
+  type: 2
+  area: {fileID: 4263832015472385972, guid: db8ea055ba78ec84e8fb79b489139f98, type: 3}
+  areaOfImpact: 0
+  canTeleport: 1

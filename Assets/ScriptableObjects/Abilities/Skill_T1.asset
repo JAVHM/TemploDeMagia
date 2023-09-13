@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e289d8a0244a5c9408da679822c379d6, type: 3}
+  m_Name: Skill_T1
+  m_EditorClassIdentifier: 
+  name: sample
+  image: {fileID: 1570658742, guid: b0b2cefa98e4ec541bc06cd00a80fd88, type: 3}
+  cooldown: 0
+  range: 5
+  rangeGO: {fileID: 6514839998135122004, guid: cc13844410d76ba46b8beff6f6e1dabc, type: 3}
+  element: {fileID: 11400000, guid: 21af86dc3969f9f409c65c46c51514dd, type: 2}
+  baseEffect: 1
+  damageMult: 1
+  wisdomMult: 1
+  defenseMult: 0
+  cost: 1
+  hasPrevImage: 0
+  prevImage: {fileID: 0}
+  hasNextImage: 0
+  nextImage: {fileID: 0}
+  type: 0
+  bullet: {fileID: 722249749867224568, guid: 9c972300226937b4cbf9d8c3fe8980d7, type: 3}
+  skillshot: {fileID: 7855707217971296277, guid: 0073a4cbd1a0b2f4695abe10c5374acf, type: 3}
+  legth: 5
+  width: 0.5
