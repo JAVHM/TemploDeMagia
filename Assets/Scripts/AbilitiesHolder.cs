@@ -14,7 +14,8 @@ public class AbilitiesHolder : MonoBehaviour
     public Vector2 load_pos_atk;
     public int cumRest = 0;
     public int loopStop = 0;
-    public bool abilityLocked = false;
+    public bool ability_lock = false;
+    bool block_aim = false;
 
     private void Start()
     {
@@ -35,43 +36,29 @@ public class AbilitiesHolder : MonoBehaviour
     private void Update()
     {
         if (Input.GetMouseButtonDown(1) && ability_n != -1)
-        {
             ResetAll();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && abilityLocked == false)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !ability_lock)
         {
             if (ability_n != -1)
-            {
-                state = AbilityState.ready;
                 ResetAbility(ability_n);
-            }
             ability_n = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && abilityLocked == false)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !ability_lock)
         {
             if (ability_n != -1)
-            {
-                state = AbilityState.ready;
                 ResetAbility(ability_n);
-            }
             ability_n = 1;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && abilityLocked == false)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !ability_lock)
         {
             if (ability_n != -1)
-            {
-                state = AbilityState.ready;
                 ResetAbility(ability_n);
-            }
             ability_n = 2;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && abilityLocked == false)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && !ability_lock)
         {
             if (ability_n != -1)
-            {
-                state = AbilityState.ready;
                 ResetAbility(ability_n);
-            }
             ability_n = 3;
         }
         if (ability_n != -1)
@@ -95,12 +82,14 @@ public class AbilitiesHolder : MonoBehaviour
         }
     }
 
+
     void Ready(int i)
     {
         ability[i].SetInstance(this.gameObject);
         state = AbilityState.aiming;
     }
-    bool block_aim = false;
+    
+
     void Aiming(int i)
     {
         bool validTarget = false;
@@ -110,8 +99,8 @@ public class AbilitiesHolder : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && validTarget && !block_aim)
         {
-            abilityLocked = true;
-            if (!ability[i].hasPrevImage)
+            ability_lock = true;
+            if (!ability[i].prevImage)
             {
                 state = AbilityState.execute;
             }
@@ -126,7 +115,7 @@ public class AbilitiesHolder : MonoBehaviour
     void Execute(int i)
     {
         ability[i].Execute(this.gameObject, unit.act_atk);
-        if (!ability[i].hasNextImage)
+        if (!ability[i].nextImage)
         {
             state = AbilityState.cooldown;
         }
@@ -138,7 +127,7 @@ public class AbilitiesHolder : MonoBehaviour
     }
     void Cooldown(int i)
     {
-        abilityLocked = false;
+        ability_lock = false;
         if (select_agent.lastUnitSelected.GetComponent<Unit>().act_act >= ability[i].cost)
         {
             ability[i].OnCooldown(this.gameObject);
@@ -154,6 +143,7 @@ public class AbilitiesHolder : MonoBehaviour
     }
     void ResetAbility(int i)
     {
+        state = AbilityState.ready;
         ability[i].Reset(this.gameObject);
         state = AbilityState.ready;
     }

@@ -5,22 +5,28 @@ using UnityEngine;
 public class BulletTracking : MonoBehaviour
 {
     public Vector3 startPosition;
-    public float Distance;
+    public float distance;
     public int damage;
     public GameObject user;
-    
-    void Update()
+
+    private void Update()
     {
-        if (Vector3.Distance(startPosition, transform.position) > Distance)
-            Destroy(this.gameObject);
+        if (Vector3.Distance(startPosition, transform.position) > distance)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Unit" && col.gameObject != user)
+        if (col.CompareTag("Unit") && col.gameObject != user)
         {
-            col.gameObject.GetComponent<Unit>().TakeEffect(damage);
-            Destroy(gameObject);
+            Unit unit = col.GetComponent<Unit>();
+            if (unit != null)
+            {
+                unit.TakeEffect(damage);
+                Destroy(gameObject);
+            }
         }
     }
 }

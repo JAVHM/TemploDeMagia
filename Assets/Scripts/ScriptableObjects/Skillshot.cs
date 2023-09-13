@@ -49,7 +49,7 @@ public class Skillshot : Ability
         Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
         rb.AddForce(skillshotInst.transform.up * 10, ForceMode2D.Impulse);
         bt.startPosition = parent.transform.position;
-        bt.Distance = legth;
+        bt.distance = legth;
     }
     public override void OnCooldown(GameObject parent)
     {

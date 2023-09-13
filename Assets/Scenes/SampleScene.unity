@@ -577,8 +577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa4de25432f4dd4ea9f1d7e309b1fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasPrefab: {fileID: 7513025311602335740, guid: d35821e9b227b2d4da026a0edbb6fef6, type: 3}
-  newCanvasInst: {fileID: 0}
+  canvas_prefab: {fileID: 7513025311602335740, guid: d35821e9b227b2d4da026a0edbb6fef6, type: 3}
+  canvas_inst: {fileID: 0}
 --- !u!1 &274130693
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,12 +967,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e9a459ba6c6fb24a9f6311ad4f0b916, type: 2}
   - {fileID: 11400000, guid: cb6fbf9fb2f8dfa428d8ff9eae4b72f4, type: 2}
   - {fileID: 11400000, guid: 5949680cf1f700e45b243611b25f990f, type: 2}
-  key: 310000003200000033000000
-  selectingAgent: {fileID: 0}
-  LoadedPositionAttack: {x: 0, y: 0}
+  key: 31000000320000003300000034000000
+  select_agent: {fileID: 0}
+  load_pos_atk: {x: 0, y: 0}
   cumRest: 0
   loopStop: 0
-  abilityLocked: 0
+  ability_lock: 0
 --- !u!114 &425356520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
-  isMoving: 1
+  moving: 0
 --- !u!212 &425356524
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1302,11 +1302,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f9192527e867804bac98a764de5a907, type: 2}
   - {fileID: 11400000, guid: 5949680cf1f700e45b243611b25f990f, type: 2}
   key: 310000003200000033000000
-  selectingAgent: {fileID: 0}
-  LoadedPositionAttack: {x: 0, y: 0}
+  select_agent: {fileID: 0}
+  load_pos_atk: {x: 0, y: 0}
   cumRest: 0
   loopStop: 0
-  abilityLocked: 0
+  ability_lock: 0
 --- !u!114 &495353169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
-  isMoving: 0
+  moving: 0
 --- !u!212 &495353173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1976,11 +1976,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f9192527e867804bac98a764de5a907, type: 2}
   - {fileID: 11400000, guid: 5f9192527e867804bac98a764de5a907, type: 2}
   key: 310000003200000033000000
-  selectingAgent: {fileID: 0}
-  LoadedPositionAttack: {x: 0, y: 0}
+  select_agent: {fileID: 0}
+  load_pos_atk: {x: 0, y: 0}
   cumRest: 0
   loopStop: 0
-  abilityLocked: 0
+  ability_lock: 0
 --- !u!114 &534383612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,7 +2060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
-  isMoving: 0
+  moving: 0
 --- !u!212 &534383616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2876,11 +2876,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9a79863161f3b5248900cd0262dab7d7, type: 2}
   - {fileID: 11400000, guid: 9a79863161f3b5248900cd0262dab7d7, type: 2}
   key: 310000003200000033000000
-  selectingAgent: {fileID: 0}
-  LoadedPositionAttack: {x: 0, y: 0}
+  select_agent: {fileID: 0}
+  load_pos_atk: {x: 0, y: 0}
   cumRest: 0
   loopStop: 0
-  abilityLocked: 0
+  ability_lock: 0
 --- !u!114 &876614073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2960,7 +2960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
-  isMoving: 0
+  moving: 0
 --- !u!212 &876614077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4566,7 +4566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900088991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 96.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

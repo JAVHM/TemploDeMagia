@@ -23,9 +23,7 @@ MonoBehaviour:
   wisdomMult: 0
   defenseMult: 0
   cost: 1
-  hasPrevImage: 0
-  prevImage: {fileID: 21300000, guid: 21b5b46987a261645a903dde726cd674, type: 3}
-  hasNextImage: 0
+  prevImage: {fileID: 0}
   nextImage: {fileID: 0}
   canDamageSelf: 0
   type: 2
